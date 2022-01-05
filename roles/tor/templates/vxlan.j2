@@ -3,6 +3,7 @@
 {% for vlan in item.vlans %}
 vlan {{ vlan.number }}
  name {{ vlan.name }}
+ vn-segment 100100
 #
 {% endfor %}
 {% for vlan in item.vlans %}
@@ -13,6 +14,18 @@ interface {{ downlink }}
 {% endfor %}
 {% endfor %}
 
+
+interface nve1
+  member vni 114103
+    ingress-replication protocol bgp
+
+
+
+evpn
+  vni 999 l2
+    rd auto
+    route-target import auto
+    route-target export auto
 
 
 
