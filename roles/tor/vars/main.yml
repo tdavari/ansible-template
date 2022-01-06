@@ -1,9 +1,9 @@
 ---
 ##################################
-profile: &profile 'vlan'     # vlan or vxlan
-vlan_name: &vlan_name '55=99'
-vlan_id: &vlan_id '2012'
-vni: &vni '1002012'
+profile: &profile 'vxlan'     # vlan or vxlan
+vlan_name: &vlan_name '555=999'
+vlan_id: &vlan_id '2020'
+vni: &vni '1002020'
 
 lct_leaf1_port: &lct_leaf1_port  ['Ten1/2/3','po50']
 lct_leaf2_port: &lct_leaf2_port []
